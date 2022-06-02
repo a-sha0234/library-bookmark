@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import Form from "./Form";
 import Card from "./Card";
+import plus from "../images/plus.png";
 
 export default function AddButton() {
   const [isClicked, setIsClicked] = useState(false);
 
   const [storeBooks, setStoreBooks] = useState([]);
 
-  console.log(storeBooks);
+  let key = 0;
 
   function handleClick() {
     // track if clicked
@@ -19,7 +20,9 @@ export default function AddButton() {
   return (
     <div>
       <section>
-        <button onClick={handleClick}>Add</button>
+        <button onClick={handleClick}>
+          <img src={plus} width="30" height="30"></img> Add book
+        </button>
       </section>
       <section>
         {isClicked && (
@@ -27,10 +30,17 @@ export default function AddButton() {
         )}
       </section>
 
-      {storeBooks &&
-        storeBooks.map((book) => {
-          return <Card book={book} />;
-        })}
+      {storeBooks.map((book) => {
+        book.key = key;
+        key++;
+        return (
+          <Card
+            book={book}
+            storeBooks={storeBooks}
+            setStoreBooks={setStoreBooks}
+          />
+        );
+      })}
     </div>
   );
 }
