@@ -5,7 +5,6 @@ export default function Form(props) {
     Author: "",
     bookName: "",
     numberOfPages: "",
-    isFinished: "",
   });
 
   function handleChange(e) {
@@ -35,6 +34,7 @@ export default function Form(props) {
         name="Author"
         value={formData.Author}
         onChange={handleChange}
+        required
       ></input>
       {/*  */}
       <label>Book name</label>
@@ -43,6 +43,7 @@ export default function Form(props) {
         name="bookName"
         value={formData.bookName}
         onChange={handleChange}
+        required
       ></input>
       {/*  */}
 
@@ -52,15 +53,10 @@ export default function Form(props) {
         name="numberOfPages"
         value={formData.numberOfPages}
         onChange={handleChange}
+        required
       ></input>
       {/*  */}
-      <label>Have you finished the book?</label>
-      <input
-        type="checkbox"
-        name="isFinished"
-        value={formData.isFinished}
-        onChange={handleChange}
-      ></input>
+
       <button>Submit</button>
       {/*  */}
     </form>
