@@ -57,7 +57,7 @@ export default function Form(props) {
       ></input>
       {/*  */}
 
-      <button>Submit</button>
+      <button name="submit">Submit</button>
       {/*  */}
     </form>
   );
