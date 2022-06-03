@@ -20,9 +20,7 @@ export default function AddButton() {
   return (
     <div>
       <section>
-        <button onClick={handleClick}>
-          <img src={plus} width="30" height="30"></img> Add book
-        </button>
+        <button onClick={handleClick}>Add book</button>
       </section>
       <section>
         {isClicked && (
