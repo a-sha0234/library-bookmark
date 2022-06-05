@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+* {
+  // css reset
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background-color: #f1e3dd;
+}
+//variables
+$fontStyle: "Inter", sans-serif;
+$fontSize: 1.2rem;
+
+//mixins
+@mixin buttonStyling() {
+  border-radius: 15px;
+  border: none;
+  padding: 15px;
+  font-size: 1.2rem;
+}
