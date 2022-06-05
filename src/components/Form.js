@@ -27,37 +27,45 @@ export default function Form(props) {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label>Author</label>
-      <input
-        type="text"
-        name="Author"
-        value={formData.Author}
-        onChange={handleChange}
-        required
-      ></input>
+    <form onSubmit={handleSubmit} className="bookForm">
+      <div className="bookForm__inputs">
+        <label>Author</label>
+        <input
+          type="text"
+          name="Author"
+          value={formData.Author}
+          onChange={handleChange}
+          required
+        ></input>
+      </div>
       {/*  */}
-      <label>Book name</label>
-      <input
-        type="text"
-        name="bookName"
-        value={formData.bookName}
-        onChange={handleChange}
-        required
-      ></input>
+      <div className="bookForm__inputs">
+        <label>Book name</label>
+        <input
+          type="text"
+          name="bookName"
+          value={formData.bookName}
+          onChange={handleChange}
+          required
+        ></input>
+      </div>
+      {/*  */}
+      <div className="bookForm__inputs">
+        <label>Total pages</label>
+        <input
+          type="number"
+          name="numberOfPages"
+          value={formData.numberOfPages}
+          onChange={handleChange}
+          required
+        ></input>
+      </div>
       {/*  */}
 
-      <label>Number of pages</label>
-      <input
-        type="number"
-        name="numberOfPages"
-        value={formData.numberOfPages}
-        onChange={handleChange}
-        required
-      ></input>
-      {/*  */}
+      <button name="submit" className="bookForm__submit">
+        Submit
+      </button>
 
-      <button name="submit">Submit</button>
       {/*  */}
     </form>
   );
