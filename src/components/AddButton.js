@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Form from "./Form";
 import Card from "./Card";
-import plus from "../images/plus.png";
 
 export default function AddButton() {
   const [isClicked, setIsClicked] = useState(false);
