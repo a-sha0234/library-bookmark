@@ -17,10 +17,14 @@ export default function AddButton() {
     });
   }
 
+  const style = {};
+
   return (
     <div>
-      <section>
-        <button onClick={handleClick}>Add book</button>
+      <section className="addBooks">
+        <button onClick={handleClick} className="addBooks__button">
+          Add book
+        </button>
       </section>
       <section>
         {isClicked && (
