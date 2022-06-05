@@ -1,7 +1,5 @@
 //Header.js
 .header {
-  display: flex;
-  justify-content: center;
   padding: 20px;
   font-size: 2rem;
   background-color: #8d9db6;
@@ -14,20 +12,9 @@
 .bookForm {
   font-size: 2rem;
   z-index: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   background-color: #8d9db6;
-  max-width: fit-content;
-  margin: auto;
   border-radius: 15px;
   color: white;
-
-  &__inputs label {
-    display: block;
-    text-align: center;
-  }
 
   &__inputs input {
     padding: 10px;
@@ -36,7 +23,6 @@
 
   &__submit {
     @include buttonStyling;
-    margin: 10px;
 
     background-color: rgb(163, 236, 15);
     color: #6e6e6e;
@@ -54,11 +40,6 @@
 
 // AddButton.js
 .addBooks {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 20px;
-
   &__button {
     @include buttonStyling;
     background-color: #8d9db6;
@@ -73,14 +54,7 @@
 
 //Card.js
 .bookCard {
-  display: flex;
-
-  flex-direction: column;
-  align-items: center;
   background-color: white;
-  max-width: 600px;
-  min-height: 300px;
-  margin: 10px;
   border-radius: 15px;
 
   &__details {
@@ -91,15 +65,9 @@
 .bookCardButtons {
   &__delete {
     @include buttonStyling;
-    min-width: 100%;
-    display: block;
-    margin: 20px;
   }
 
   &__isFinished {
     @include buttonStyling;
-    min-width: 100%;
-    display: block;
-    margin: 20px;
   }
 }
