@@ -1,3 +1,3 @@
 export default function Header() {
-  return <div>Library</div>;
+  return <div className="header">Library</div>;
 }
